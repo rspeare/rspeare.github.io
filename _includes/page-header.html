@@ -1,0 +1,12 @@
+<section class="page-header">
+  <h1 <a href="/" class="project-name">{{ site.title | escape }} </a> </h1> 
+  <h2 class="project-tagline">{{ site.desciption }}</h2>
+  <a href="/" class="btn">Blog</a>  
+{% if site.github_username %}
+  <a class="btn" {% include icon-github.html username=site.github_username %} </a>
+{% endif %}
+{% if site.twitter_username %}
+  <a class="btn" {% include icon-twitter.html username=site.twitter_username %} </a>
+{% endif %}
+<a href="/about/" class="btn">About</a>  
+</section>

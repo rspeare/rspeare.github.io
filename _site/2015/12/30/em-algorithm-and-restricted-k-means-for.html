@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta charset="UTF-8">
+  <title>rspeare.github.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 <a href="/" class="project-name">rspeare.github.io </a> </h1> 
+  <h2 class="project-tagline"></h2>
+  <a href="/" class="btn">Blog</a>  
+
+  <a class="btn" <a href="https://github.com/rspeare"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">rspeare</span></a>
+ </a>
+
+
+  <a class="btn" <a href="https://twitter.com/waiting4spark"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">waiting4spark</span></a>
+ </a>
+
+<a href="/about/" class="btn">About</a>  
+</section>
+
+
+    <section class="main-content">
+      
+      <style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<h2>EM Algorithm and restricted K-means for the M-Traveling Salesman Problem</h2>
+<p class="meta">30 Dec 2015</p>
+
+<div dir="ltr" style="text-align: left;" trbidi="on">One very popular and very 
+useful algorithm that its taken me a while to get around to is something 
+called the Expectation-Maximization algorithm, or EM. A lot of people treat 
+this thing as a black box, but because I wanted to implement my own 
+handwritten constraints in a K-means and Gaussian mixture model, I had to sit 
+down and read through things. 
+
+Turns out the EM algorithm is all about introducing auxiliary variables to 
+your problem -- auxiliary data to be exact. Physicists solve things all the 
+time by ``enriching'' and the integrating out, which is exactly what EM does. 
+Let's say we have a sequence of observations $\vec{x}_i$ for $i=1...N$, and we 
+would like to estimate their density. Problem is, they seem to form some awful 
+distribution, something that would be impossible to model with a Gaussian 
+distribution or a Poisson or any ``sane'' thing. We could resort to 
+non-parametrics, such as Kernel Density estimation but another idea may be to 
+say ``Hey, I bet the first data point came from a Gaussian distribution, but 
+one that was centered over THERE. Let's call it Gaussian  A. And I bet the 
+second was drawn from the same Gaussian A. But the third, which is really far 
+away, was drawn from an entirely different Gaussian distribution, which we can 
+call B \dots" etc. 
+
+What we're doing here is introducing ``membership'', which of course has a 
+close relation to clustering and space segmentation, but more on that later. 
+We now have our auxiliary variables in the problem. 
+
+\begin{eqnarray} 
+\vec{x}_i, \vec{z}_i 
+\end{eqnarray} 
+
+For each $i$, $\vec{x}$ is the observable, living in lets say $D$ dimensions, 
+since each data point has D features, while $\vec{z}$ is the membership. For 
+the Gaussian mixture case $\vec{z}$ lives in K dimensions, where K is the 
+number of Gaussians -- or clusters -- we allow to build the space. Now it's 
+pretty simple to write down the log Likelihood, but we have to think about 
+what parameters we are conditioning on. We've got the mean and variance of 
+EACH Gaussian, let's call them $\mathbf{\mu}_k, \mathbf{\Sigma}_k$ and we've 
+also got the probability of membership $\vec{z}_i$, for every $i$, essentially 
+its PDF. Let's call this $\vec{\phi}$, which note, has K components and is in 
+general a multinomial for the whole data set, multinoulli for a single draw. 
+(The attentive reader will note that I'm taking notation directly from Andrew 
+Ng and Kevin Murphy, who both have great notes on this). 
+
+\begin{eqnarray} 
+\mathcal{L}(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;=&amp; \log 
+\left(P(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k)\right) 
+\end{eqnarray} 
+
+Let's take this a step at a time. If we assume that every data point 
+$\vec{x}_i$ is independent, then we can write 
+\begin{eqnarray} 
+\mathcal{L}(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;=&amp; \sum_i 
+\log \left(P(\vec{x}_i \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k)\right) 
+\end{eqnarray} 
+
+Now, if we want to include our auxiliary variables, we have to include them 
+explicitly inside the log but marginalize over them: 
+
+\begin{eqnarray} 
+\mathcal{L}(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;=&amp; \sum_i 
+\log \left( \sum_{z_i} P(\vec{x}_i, z_i \vert \phi, 
+\mathbf{\mu}_k,\mathbf{\Sigma}_k)\right) 
+\end{eqnarray} 
+
+And now, we can use a very interesting trick. My first intuition at this point 
+was to expand the joint inside the log like so 
+
+\begin{eqnarray} 
+\mathcal{L}(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;=&amp; \sum_i 
+\log \left( \sum_{z_i} P(\vec{x}_i \vert 
+\mathbf{\mu}_k,\mathbf{\Sigma}_k)P(z_i \vert \phi) \right) 
+\end{eqnarray} 
+
+and keep working but apparently there's a more useful way to do things. If we 
+divide and multiply by some UNKNOWN PDF in $z_i$, $Q(z_i)$ we can use Jensen's 
+equality to write: 
+
+\begin{eqnarray} 
+\mathcal{L}(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;=&amp; \sum_i 
+\log \left( \sum_{z_i} Q(z_i) \frac{P(\vec{x}_i, z_i \vert \phi, 
+\mathbf{\mu}_k,\mathbf{\Sigma}_k)}{Q(z_i)}\right)\\ 
+&amp; \ge &amp; \sum_i \sum_{z_i} Q(z_i)  \log \left( \frac{P(\vec{x}_i, z_i 
+\vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k)}{Q(z_i)}\right) 
+\end{eqnarray} 
+
+We can do this because log is a concave function, and for any concave function 
+we have: 
+
+\begin{eqnarray} 
+E\left[f(x) \right] &amp; \le &amp; f(E\left[x \right]) 
+\end{eqnarray} 
+
+Our expectation is over $z_i$ and so now we see that our log loss is strictly 
+greater than this somewhat easier expression on the RHS. But, it kind of looks 
+familiar... its the negative KL divergence between the two distributions in 
+$z_i$! If we want maximize our lower bound and make it as small as possible, 
+we need to minimize the KL, divergence, essentially setting: 
+
+\begin{eqnarray} 
+P(\vec{x}_i, z_i \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;= &amp; 
+\mathrm{const} Q(z_i) \ \ \forall \ z_i 
+\end{eqnarray} 
+
+So if we sum both sides in $z_i$ we get the marginalized distribution on the 
+left and a constant on the right: 
+
+\begin{eqnarray} 
+\sum_{z_i}P(\vec{x}_i, z_i \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) 
+&amp;= &amp; \sum_{z_i} \mathrm{const} Q(z_i) \\ 
+P(\vec{x}_i \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) &amp;=&amp; 
+\mathrm{const} 
+\end{eqnarray} 
+
+i.e. the best candidate for $Q(z_i)$ is the conditional membership, based on 
+the datapoint $x_i$ itself! 
+
+\begin{eqnarray} 
+Q(z_i) &amp;=&amp; \frac{P(\vec{x}_i, z_i \vert \phi, 
+\mathbf{\mu}_k,\mathbf{\Sigma}_k)}{P(\vec{x}_i \vert \phi, 
+\mathbf{\mu}_k,\mathbf{\Sigma}_k)}\\ 
+&amp;=&amp; P( z_i \vert \vec{x}_i, \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) 
+\end{eqnarray} 
+
+So now, with this $Q$ in hand in we have a tight lower bound on the log 
+likelihood, which we can then maximize in $\mathbf{\mu}_k, \mathbf{\Sigma}_k$: 
+
+\begin{eqnarray} 
+\mathcal{L}(X \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k)&amp;\ge &amp; 
+\sum_i \sum_{z_i} P(z_i \vert \vec{x}_i, \phi, \mu_k ,\Sigma_k )  \log \left( 
+P(\vec{x}_i \vert \phi, \mathbf{\mu}_k,\mathbf{\Sigma}_k) \right) 
+\end{eqnarray} 
+
+The EM algorithm simply consists of the following two steps: 
+
+(1) Given $\mu_k,\Sigma_k$ and the data $X$, calculate $P(z_i \vert \vec{x}_i, 
+\phi, \mu_k ,\Sigma_k )  $. (E-step) 
+(2) Given the above, maximize w/r/t $\mu_k,\Sigma_k$. (M-Step) 
+(*) repeat 
+
+
+So, we are essentially calculating data point memberships -- E step -- and 
+then optimizing the log likelihood, as we always would -- E step. The 
+difference here is that we don't set hard memberships in our model. We let 
+there be fractional or ``soft'' memberships in this likelihood expression. 
+
+In algorithms like K-means, which actually works on the same EM principle with 
+some drastic assumptions, we have **hard** memberships, and **identical, 
+diagonal **covariance matrices across all Gaussians -- or clusters -- K. These 
+assumptions make things super fast and scalable but of the data has any 
+spatial skewness or inhomogeneity, we could be in trouble. [Differing size of 
+clusters is a problem two, but I haven't come to understand this yet] 
+
+The beautiful thing about EM, and I don't have time to get into it now, is 
+that it's gauranteed to monotonically increase the log likelihood iteration by 
+iteration, and this is simply due to the convexity properties we talked about 
+earlier. Local maxima can be reached, but as long things are smartly seeded we 
+can expect to find a good fit. 
+
+---------------------------------------------------------------------- 
+
+The reason I was using all this stuff, was to segment deliveries in a 
+Traveling salesman problem. It's actually called the M travelling salesman 
+problem where multiple men try to visit many different locations with the 
+least amount of effort -- however that is defined. There are some restrictions 
+on how much the men can carry, perhaps how far they can go, and so this 
+constitutes the restriction in my K-means/GMM models. 
+
+[**<span style="color: blue;">Oh, and by the way, those men might be Santa 
+making multiple trips to deliver gifts at 
+Christmas**](https://www.kaggle.com/c/santas-stolen-sleigh) 
+</span></div>
+
+
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">rspeare.github.io</a> is maintained by <a href="">rspeare</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+
+  <a href="https://www.linkedin.com/in/rob-speare-aaa6834a">
+    <span class="icon  icon--linkedin">
+      <svg viewBox="0 0 10000 10000" >
+        <path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+        C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+        M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+        c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+        s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+      </svg>
+    </span>
+
+    <span class="username"></span>
+  </a>
+
+</footer>
+ 
+
+    </section>
+
+  </body>
+</html>

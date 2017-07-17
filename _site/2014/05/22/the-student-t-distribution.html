@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta charset="UTF-8">
+  <title>rspeare.github.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 <a href="/" class="project-name">rspeare.github.io </a> </h1> 
+  <h2 class="project-tagline"></h2>
+  <a href="/" class="btn">Blog</a>  
+
+  <a class="btn" <a href="https://github.com/rspeare"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">rspeare</span></a>
+ </a>
+
+
+  <a class="btn" <a href="https://twitter.com/waiting4spark"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">waiting4spark</span></a>
+ </a>
+
+<a href="/about/" class="btn">About</a>  
+</section>
+
+
+    <section class="main-content">
+      
+      <style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<h2>The Student t- distribution</h2>
+<p class="meta">22 May 2014</p>
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Let's say we are given 
+some data, a series of scalar values x_i with subscript 1 to n. The student 
+t-statistic is defined as 
+
+\begin{eqnarray} 
+t=\frac{\bar{x}-\mu}{\sqrt{s^2/n}} 
+\end{eqnarray} 
+
+Now we can write $s^2$ as our unbiased estimator for the variance, 
+
+\begin{eqnarray} 
+s^2 &amp;=&amp; \sum_i^N \frac{(x_i-\bar{x})^2}{N-1} 
+\end{eqnarray} 
+
+Let's play with the t statistic representation a little more, 
+
+\begin{eqnarray} 
+t=\frac{(\frac{\bar{x}-\mu}{\sigma})\sqrt{n}}{\sqrt{\frac{s^2}{\sigma^2}}} 
+\end{eqnarray} 
+
+We can now see that the numerator is a random variable with Expectation value 
+0, and if we think about things a little bit, assuming that each and every 
+data point is drawn from a Gaussian distribution: 
+
+\begin{eqnarray} 
+x_i \sim N(\mu,\sigma) 
+\end{eqnarray} 
+Then the addition of all of our x_i's -- in order to create the mean -- will 
+be a convolution of all of our Gaussians, and thus an addition of our second 
+cumulants, the variance: 
+
+\begin{eqnarray} 
+n\bar(x)=\sum_i^n x_i \sim N(\mu,\sigma) \star N(\mu,\sigma) \star 
+N(\mu,\sigma) \cdots &amp;=&amp; N(n\mu,\sqrt{n}\sigma) 
+\end{eqnarray} 
+
+This is of course the same idea as the width of a random walker, we see that 
+with n steps, the variance of our end Probability density goes like the square 
+of n. Now subtracting the mean is just centering our PDF: 
+
+\begin{eqnarray} 
+\bar{x}-\mu=\sum_i^n \frac{x_i-\mu}{n} &amp;\sim&amp; N(0,\sqrt{n}\sigma) 
+\end{eqnarray} 
+And so we find, if we scale by our theoretical variance, the random variable 
+in the numerator is determined by a particularly tractable normal 
+distribution, with variance n 
+
+\begin{eqnarray} 
+X=\frac{(\bar{x}-\mu)\sqrt{n}}{\sigma}&amp;\sim&amp; N(0,n) 
+\end{eqnarray} 
+
+Now for the denominator. Without the square root sign we have: 
+
+\begin{eqnarray} 
+\frac{s^2}{\sigma^2}&amp;=&amp; \sum_i^n \frac{(x_i-\mu)^2}{(n-1)\sigma^2} 
+\end{eqnarray} 
+
+And we can see immediately this will be the sum of the square of our former 
+variables, 
+
+\begin{eqnarray} 
+x_i-\mu &amp;\sim&amp; N(0,\sigma) \\ 
+\frac{x_i-\mu}{\sigma} &amp;\sim&amp; N(0,1)\\ 
+\frac{(x_i-\mu)^2}{\sigma^2} &amp;\sim&amp; 
+\frac{N(0,1)(x^2)}{x}=g_{1/2,1/2}(x^2)\\ 
+\frac{(x_i-\bar{x})^2}{(n-1)\sigma^2} &amp;\sim&amp; 
+\frac{N(0,1)(x^2)}{x}=g_{1/2,1/2}(x^2) 
+\end{eqnarray} 
+
+Where the final PDF written is the standard Gamma density 
+\begin{eqnarray} 
+N(0,1) &amp;=&amp; \frac{1}{\sqrt{2\pi}}e^{-x^2/2}\\ 
+g_{\alpha,\nu}(x)&amp;=&amp; \frac{1}{\Gamma(\nu)}\alpha^\nu 
+x^{\nu-1}e^{-\alpha x}\\ 
+g_{1/2,1/2}(x^2) &amp;=&amp; 
+\frac{1}{\sqrt{2\pi}}(x^2)^{-1/2}e^{-\frac{x^2}{2}} 
+\end{eqnarray} 
+
+Which is the required PDF for the square of our Gaussian random variable, with 
+unit variance. Now in order to convert to the square root of denominator 
+variable, let's call it y, we need to multiply by a certain factor: 
+
+\begin{eqnarray} 
+\frac{(x_i-\bar{x})^2}{(n-1)\sigma^2}=\frac{s^2}{\sigma^2} &amp;\sim &amp; 
+g_{1/2,n/2}(x^2) \\ 
+Y=\sqrt{\frac{s^2}{\sigma^2}} &amp;\sim &amp; 2Y g_{1/2,n/2}(Y^2) 
+\end{eqnarray} 
+
+And so we see that 
+
+\begin{eqnarray} 
+T=\frac{X}{Y} 
+\end{eqnarray} 
+where x,y each have their own probability density functions. The best way to 
+combine these pdf's is to to write constrain X and then integrate over all 
+possible values of Y. For example the cumulative distribution function for t 
+should be: 
+
+\begin{eqnarray} 
+X &amp;\sim &amp; f\\ 
+Y &amp;\sim &amp; g\\ 
+T &amp;\sim &amp; P(t)\\ 
+\Phi(t)=P(T \leq t)&amp;=&amp; \int_0^t \int_0^\infty g(y)F(t^\prime Y) 
+dt^\prime dy 
+P(t) &amp;=&amp; \int_0^\infty y f(ty)g(y) dy 
+\end{eqnarray} 
+
+Plugging in our probability densities from before, we have: 
+
+\begin{eqnarray} 
+f(ty) &amp;=&amp; \frac{1}{\sqrt{2\pi} 
+n}\mathrm{Exp}\left[-\frac{(t^2y^2)}{2n^2}\right]\\ 
+g(y) &amp;=&amp; 
+\frac{y^{n-1}}{\Gamma(\frac{n}{2})}\frac{1}{\sqrt{2^{n-2}}}\mathrm{Exp}\left(-\frac{y^2}{2}\right)\\ 
+P(t) &amp;=&amp; \int_0^\infty t \frac{1}{\sqrt{2\pi} 
+n}\mathrm{Exp}\left[-\frac{(t^2y^2)}{2n^2}\right]\frac{y^{n}}{\Gamma(\frac{n}{2})}\frac{1}{\sqrt{2^{n-2}}}\mathrm{Exp}\left(-\frac{y^2}{2}\right) 
+dy\\ 
+
+&amp;=&amp;\frac{1}{\sqrt{2^{n}}}\frac{1}{\Gamma(\frac{1}{2}n)\Gamma(\frac{n}{2})} 
+\int_0^\infty y^{n} 
+\mathrm{Exp}\left[-\frac{(t^2y^2)}{2n^2}-\frac{y^2}{2}\right]dy\\ 
+
+&amp;=&amp;\frac{1}{\sqrt{2^{n}}}\frac{1}{\Gamma(\frac{1}{2}n)\Gamma(\frac{n}{2})} 
+\int_0^\infty y^{n} 
+\mathrm{Exp}\left[-\frac{y^2}{2}(1+\frac{t^2}{n^2})\right]dy\\ 
+\end{eqnarray} 
+
+Now making the tedious variable change 
+
+\begin{eqnarray} 
+s= \frac{y^2}{2}(1+\frac{t^2}{n^2}) 
+\end{eqnarray} 
+
+we find 
+\begin{eqnarray} 
+
+y^{n}dy=\frac{2^{\frac{n}{2}}s^{\frac{n+1}{2}-1}}{\left(1+\frac{t^2}{n^2}\right)^{\frac{n+1}{2}}}ds 
+\end{eqnarray} 
+
+and so P(t) reduces to a Gamma integral: 
+\begin{eqnarray} 
+
+P(t)&amp;=&amp;\frac{1}{\sqrt{2^{n}}n}\frac{1}{\Gamma(\frac{1}{2})\Gamma(\frac{n}{2})} 
+\int_0^\infty y^{n} 
+\mathrm{Exp}\left[-\frac{y^2}{2}(1+\frac{t^2}{n^2})\right]dy\\ 
+
+&amp;=&amp;\frac{1}{n}\frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{1}{2})\Gamma(\frac{n}{2})}\frac{1}{\left(1+\frac{t^2}{n^2}\right)^{\frac{n+1}{2}}}\\ 
+
+&amp;=&amp;\frac{1}{n}\frac{1}{B(\frac{1}{2},\frac{n}{2})}\frac{1}{\left(1+\frac{t^2}{n^2}\right)^{\frac{n+1}{2}}}\\ 
+\end{eqnarray} 
+
+I'm a bit off from the wikipedia article on the student-t here, but a good 
+exercise in combining PDFs. 
+</div>
+
+
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">rspeare.github.io</a> is maintained by <a href="">rspeare</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+
+  <a href="https://www.linkedin.com/in/rob-speare-aaa6834a">
+    <span class="icon  icon--linkedin">
+      <svg viewBox="0 0 10000 10000" >
+        <path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+        C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+        M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+        c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+        s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+      </svg>
+    </span>
+
+    <span class="username"></span>
+  </a>
+
+</footer>
+ 
+
+    </section>
+
+  </body>
+</html>
