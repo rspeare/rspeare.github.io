@@ -1,3 +1,6 @@
+all:
+	make clean
+	make blog
 clean:
 	$(RM) *~
 
